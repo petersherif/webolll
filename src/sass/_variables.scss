@@ -1,0 +1,31 @@
+// Colors
+
+$white: #ffffff;
+$black: #000000;
+$smokeblack:  #141618;
+$mineblack: #333333;
+$stonegray: #7e7f81;
+
+$dodgerblue: rgb(41, 106, 245);
+
+
+
+// Background colors
+$bg-primary: $white;
+$bg-secondary: 	$smokeblack;
+$bg-secondary-darker: mix($black, $smokeblack, 7%);
+$bg-colored: $dodgerblue;
+
+
+// Text colors
+$text-primary: $mineblack;
+$text-secondary: $white;
+$text-muted: $stonegray;
+$text-muted-light: mix($white, $text-muted, 20%);
+$text-muted-dark: mix($black, $text-muted, 20%);
+$text-colored: $dodgerblue;
+
+
+
+// Spacing
+$section-pad: 100px;

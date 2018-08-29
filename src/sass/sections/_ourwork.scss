@@ -1,0 +1,10 @@
+.work-item {
+	min-height: 300px;
+
+	@for $wi from 1 through 6 {
+		&.work-item-#{$wi} {
+			background: url(../img/work-#{$wi}.jpg) center center / cover no-repeat;
+		}
+		
+	}
+}

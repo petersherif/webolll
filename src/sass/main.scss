@@ -1,0 +1,16 @@
+@import '_variables';
+@import 'base/_base';
+@import 'layout/_navbar';
+@import 'layout/_header';
+@import 'layout/_section';
+@import 'layout/_footer';
+@import 'sections/_ourwork';
+
+.footer {
+	background: $bg-secondary;
+
+	&__copyright {
+		background: $bg-secondary-darker;
+		color: $text-muted-light;
+	}
+}

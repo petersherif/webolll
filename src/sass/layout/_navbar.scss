@@ -1,0 +1,31 @@
+.navbar {
+	font-family: 'Roboto', san-serif;
+
+	.navbar-brand {
+		max-width: 115px;
+	}
+
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				color: rgba(17, 17, 17, 1);
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 500;
+				text-transform: uppercase;
+				position: relative;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
+			&:not(:first-child) {
+				.nav-link:before {
+					content: "\2022";
+			    position: absolute;
+			    top: calc(50% - 9px);
+			    left: -2.2px;
+				}
+			}
+		}
+	}
+}

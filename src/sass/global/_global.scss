@@ -1,15 +1,16 @@
-h1,
-h3,
-.header p {
-	font-family: $bold-font;
-}
-
 body {
 	font-family: $body-font;
   font-weight: $fw-normal;
   font-size: 0.875em;
   line-height: 2;
   color: $text-primary;
+  position: relative;
+}
+
+h1,
+h3,
+.header p {
+	font-family: $bold-font;
 }
 
 h1 {

@@ -1,15 +1,16 @@
-h1,
-h3,
-.header p {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 0.875em;
   line-height: 2;
   color: #333333;
+  position: relative;
+}
+
+h1,
+h3,
+.header p {
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {

@@ -12,9 +12,9 @@ $dodgerblue: rgb(41, 106, 245);
 
 // Background colors
 $bg-primary: $white;
-$bg-secondary: 	$smokeblack;
-$bg-secondary-darker: mix($black, $smokeblack, 7%);
-$bg-colored: $dodgerblue;
+$bg-dark: 	$smokeblack;
+$bg-darker: mix($black, $smokeblack, 7%);
+$bg-accent: $dodgerblue;
 
 
 // Text colors
@@ -23,9 +23,44 @@ $text-secondary: $white;
 $text-muted: $stonegray;
 $text-muted-light: mix($white, $text-muted, 20%);
 $text-muted-dark: mix($black, $text-muted, 20%);
-$text-colored: $dodgerblue;
+$text-accent: $dodgerblue;
 
 
 
 // Spacing
 $section-pad: 100px;
+
+
+// Fonts
+$display-font: 'Poppins', sans-serif;
+$bold-font: 'Roboto', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Font sizes
+$fs-xs: 10px;
+$fs-sm: 12px;
+$fs-md: 14px;
+$fs-lg: 16px;
+$fs-xl: 18px;
+$fs-2x: 20px;
+$fs-3x: 24px;
+$fs-4x: 28px;
+$fs-5x: 38px;
+$fs-6x: 42px;
+$fs-7x: 48px;
+$fs-8x: 56px;
+
+// Font weights
+$fw-thin: 300;
+$fw-normal: 400;
+$fw-bold: 700;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

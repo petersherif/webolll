@@ -1,0 +1,78 @@
+h1,
+h3,
+.header p {
+	font-family: $bold-font;
+}
+
+body {
+	font-family: $body-font;
+  font-weight: $fw-normal;
+  font-size: 0.875em;
+  line-height: 2;
+  color: $text-primary;
+}
+
+h1 {
+	font-weight: $fw-bold;
+	line-height: 1;
+	letter-spacing: -3px;
+}
+
+h2,
+blockquote {
+	font-family: $display-font;
+	font-weight: $fw-bold;
+}
+
+blockquote {
+	font-size: $fs-xl;
+	padding: 0 20%;
+	line-height: 1.5;
+}
+
+h3 {
+	font-weight: $fw-bold;
+	line-height: 1.25;
+	font-size: $fs-lg + 1;
+}
+
+.fa {
+	color: $text-accent;
+}
+
+.btn-lg {
+	font-size: $fs-md;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	font-weight: $fw-bold;
+}
+
+.btn-primary {
+	background: $bg-accent;
+}
+
+.brooklyn-logo {
+	max-width: 115px;
+}
+
+// .swiper-container {
+// 	min-height: 300px;
+// }
+
+// Media Queries
+@include media-breakpoint-up(sm) {
+	blockquote {
+		font-size: $fs-3x;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.brooklyn-logo {
+		max-width: 97px;
+	}
+
+	blockquote {
+		font-size: $fs-4x + 2;
+		padding: 0 27%;
+	}
+}

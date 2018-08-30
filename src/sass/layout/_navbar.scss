@@ -1,30 +1,123 @@
 .navbar {
-	font-family: 'Roboto', san-serif;
+	transition: 0.2s ease-in-out;
+	padding-left: 3.5%;
+	padding-right: 3.5%;
 
-	.navbar-brand {
-		max-width: 115px;
+	.navbar-toggler {
+
+		border: 0;
+		outline: 0;
+
+		&-icon, {
+			background-image: none;
+			width: 25px;
+			height: 3px;
+			background-color: $bg-darker;
+			position: relative;
+
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				width: 25px;
+				height: 3px;
+				background-color: $bg-darker;
+				left: 0;
+				transition-property: margin-top, transform;
+				transition-duration: 0.2s;
+			}
+
+			&:before {
+				margin-top: -7px;
+			}
+
+			&:after {
+				margin-top: 7px;
+			}
+
+			&.opened {
+				background-color: transparent;
+
+				&:before,
+				&:after {
+					margin-top: 0;
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
 	}
 
 	.navbar-nav {
-		.nav-item {
-			.nav-link {
-				color: rgba(17, 17, 17, 1);
-				font-size: 12px;
-				font-style: normal;
-				font-weight: 500;
-				text-transform: uppercase;
-				position: relative;
-				padding-right: 10px;
-				padding-left: 10px;
-			}
+		font-family: $bold-font;
 
-			&:not(:first-child) {
-				.nav-link:before {
-					content: "\2022";
-			    position: absolute;
-			    top: calc(50% - 9px);
-			    left: -2.2px;
-				}
+	}
+
+	.nav-item {
+		
+		&:hover,
+		&.active {
+			.nav-link{
+				color: $text-accent;
+			}
+		}
+
+		.nav-link {
+			color: rgba(17, 17, 17, 1);
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			text-transform: uppercase;
+			position: relative;
+			padding-right: 10px;
+			padding-left: 10px;
+			transition: color 0.2s;
+
+			&:before {
+				content: "\2022";
+		    position: absolute;
+		    top: 8px;
+		    left: -2.2px;
+			}
+		}
+	}
+
+	&.navbar-bg-scroll,
+	&:hover {
+		background: rgba($bg-primary, 0.9);
+		box-shadow: 0 1px 5px rgba(8, 8, 8, 0.15);
+	}
+}
+
+
+// Media Queries Up
+@include media-breakpoint-up(md) {
+	.navbar {
+		.navbar-brand {
+			max-width: 97px;
+		}
+
+		.nav-item:first-child {
+			.nav-link:before {
+				display: none;
+			}
+		}
+	}
+}
+
+// Media Queries Down
+@include media-breakpoint-down(sm) {
+	.navbar {
+		.navbar-nav {
+			height: calc(100vh - 66px);
+		}
+
+		.nav-item {
+			.nav-link:before {
+				color: $text-accent;
 			}
 		}
 	}

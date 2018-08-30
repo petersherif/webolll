@@ -1,0 +1,16 @@
+.feature {
+
+	.feature__icon {
+		min-width: 40px;
+		text-align: center;
+
+		.fa {
+			font-size: $fs-5x;
+		}
+	} // Feature Icon
+
+	.feature__body {
+		max-width: 430px;
+		margin: auto;
+	}
+}

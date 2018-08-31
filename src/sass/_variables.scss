@@ -29,6 +29,8 @@ $text-accent: $dodgerblue;
 
 // Spacing
 $section-pad: 100px;
+$btn-lg-pad: 12px 30px;
+$nav-link-pad: 10px;
 
 
 // Fonts
@@ -64,3 +66,11 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
+
+
+// Sizing
+$icon-min-width: 40px;
+$feature-max-width: 430px;
+$logo-max-width: 115px;
+$logo-max-width-md: 97px;
+$work-item-min-width: 300px;

@@ -1,29 +1,31 @@
 .card {
+
 	.overlay-img {
 		@include fullSizeOver();
 		opacity: 0;
 		transition: opacity 0.2s;
-	}
+	} // Overlay img
 
 	&:hover {
 		.overlay-img {
 			opacity: 1;
 		}
-	}
-}
+	} // Overlay img on hover
+} // Card
 
 .card-footer {
+
 	.card-link {
 		.fa {
 			color: $text-primary;
 			transition: color 0.2s;
 			font-size: $fs-lg;
-		}
+		} // Card footer icon
 
 		&:hover {
 			.fa {
 				color: $text-accent;
 			}
-		}
-	}
-}
+		} // Card footer icon on hover
+	} // Card link
+} // Card footer

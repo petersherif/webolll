@@ -17,12 +17,12 @@ section {
 	&#quote {
 		background: $black url(../img/contact-hero.jpg) center center / cover no-repeat;
 		background-attachment: fixed;
-	}
+	} // Parallax bg section
 
 	&#getconnected {
 		background: $black url(../img/contact-hero-1.jpg) center center / cover no-repeat;
 		background-attachment: fixed;
-	}
+	} // Parallax bg section
 }
 
 // Media Queries Up
@@ -32,4 +32,4 @@ section {
 			font-size: $fs-xl;
 		}
 	}
-}
+} // Screens above 1200px

@@ -9,7 +9,7 @@
 	.fa {
 		color: $text-secondary;
 		margin-right: 10px;
-	}
+	} // Footer text color
 	
 	a {
 		color: $text-muted;
@@ -18,9 +18,5 @@
 			color: $text-secondary;
 			text-decoration: none;
 		}
-	}
-
-	&__copyright {
-		
-	}
-}
+	} // Footer links
+} // Footer

@@ -10,26 +10,26 @@ body {
 	&.loaded {
 		overflow-x: hidden;
 		overflow-y: auto;
-	}
-}
+	} // Body after page loaded
+} // Body
 
 h1,
 h3,
 .header p {
 	font-family: $bold-font;
-}
+} // h1, h3, p inside the main header
 
 h1 {
 	font-weight: $fw-bold;
 	line-height: 1;
 	letter-spacing: -3px;
-}
+} // header main headline
 
 h2,
 blockquote {
 	font-family: $display-font;
 	font-weight: $fw-bold;
-}
+} // Sections headline
 
 blockquote {
 	font-size: $fs-xl;
@@ -41,25 +41,25 @@ h3 {
 	font-weight: $fw-bold;
 	line-height: 1.25;
 	font-size: $fs-lg + 1;
-}
+} // Blocks headline
 
 .fa {
 	color: $text-accent;
-}
+} // Icons default color
 
 .btn-lg {
 	font-size: $fs-md;
-	padding: 12px 30px;
+	padding: $btn-lg-pad;
 	text-transform: uppercase;
 	font-weight: $fw-bold;
-}
+} // Large button
 
 .btn-primary {
 	background: $bg-accent;
-}
+} // Button color
 
 .webolll-logo {
-	max-width: 115px;
+	max-width: $logo-max-width;
 }
 
 .fade-on-scroll {
@@ -71,7 +71,7 @@ h3 {
 		opacity: 1;
 		margin-top: 0;
 	}
-}
+} // Fade on scroll
 
 .heart-animation {
   animation: heart-beat 1s infinite ease-in-out;
@@ -84,27 +84,30 @@ h3 {
   50% {
     transform: scale(1.1);
   }
-}
+} // Heart animation keyframes
+
+
 
 // Media Queries
 @include media-breakpoint-up(sm) {
 	blockquote {
 		font-size: $fs-3x;
 	}
-}
+} // Screens above 768px
 
 @include media-breakpoint-up(md) {
 	.webolll-logo {
-		max-width: 97px;
+		max-width: $logo-max-width-md;
 	}
 
 	blockquote {
 		font-size: $fs-4x + 2;
 		padding: 0 27%;
 	}
-}
+} // Screens above 992px
 
 
+// Preloader styles
 .page-loading {
   position: fixed;
   top: 0;
@@ -112,8 +115,9 @@ h3 {
   right: 0;
   left: 0;
   background-color: #F9FAFB;
-  z-index: 99999; }
-  .page-loading .spinner {
+  z-index: 99999;
+  
+  .pulse {
     border-radius: 50px;
     line-height: 100px;
     text-align: center;
@@ -124,8 +128,10 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    letter-spacing: 0.05em; }
-    .page-loading .spinner:before, .page-loading .spinner:after {
+    letter-spacing: 0.05em;
+
+    &:before,
+    &:after {
       content: '';
       position: absolute;
       top: 0;
@@ -134,17 +140,28 @@ h3 {
       height: 100%;
       background: $bg-dark;
       border-radius: 50px;
-      opacity: 0; }
-    .page-loading .spinner:before {
-      transform: scale(1);
-      animation: pulse 1000ms infinite linear; }
-    .page-loading .spinner:after {
-      animation: pulse 1000ms 350ms infinite linear; }
+      opacity: 0;
+    } // Pulse circles styles
 
+    &:before {
+      transform: scale(1);
+      animation: pulse 1000ms infinite linear;
+    } // Pulse first circle
+
+    &:after {
+      animation: pulse 1000ms 350ms infinite linear;
+    } // Pulse second circle
+  } // Pulse
+}
+
+// Pulse animation keyframes
 @keyframes pulse {
   0% {
     transform: scale(0.1);
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
     transform: scale(1);
-    opacity: 0; } }
+    opacity: 0;
+  }
+} // Pulse animation keyframes

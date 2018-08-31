@@ -1,5 +1,5 @@
 .work-item {
-	min-height: 300px;
+	min-height: $work-item-min-width;
 
 	@for $wi from 1 through 6 {
 		&.work-item-#{$wi} {
@@ -18,7 +18,7 @@
 			transform: scale(0.3);
 			transition: transform 0.3s;
 		}
-	}
+	} // Work item overlay
 
 	&:hover {
 		.work-item__overlay {
@@ -28,5 +28,5 @@
 				transform: scale(1);
 			}
 		}
-	}
-}
+	} // Work item show overlay on hover
+} // Work item

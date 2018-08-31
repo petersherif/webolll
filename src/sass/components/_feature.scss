@@ -1,7 +1,7 @@
 .feature {
 
 	.feature__icon {
-		min-width: 40px;
+		min-width: $icon-min-width;
 		text-align: center;
 
 		.fa {
@@ -10,7 +10,7 @@
 	} // Feature Icon
 
 	.feature__body {
-		max-width: 430px;
+		max-width: $feature-max-width;
 		margin: auto;
-	}
-}
+	} // Feature body
+} // Feature

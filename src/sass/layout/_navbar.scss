@@ -26,6 +26,7 @@
 				left: 0;
 				transition: margin-top 0.2s 0.2s, transform 0.2s;
 			}
+			// Icon stacked bars
 
 			&:before {
 				margin-top: -7px;
@@ -48,13 +49,12 @@
 				&:after {
 					transform: rotate(-45deg);
 				}
-			}
-		}
-	}
+			} // Navbar toggler icon opened
+		} // Navbar toggler icon
+	} // Navbar toggler
 
 	.navbar-nav {
 		font-family: $bold-font;
-
 	}
 
 	.nav-item {
@@ -67,14 +67,14 @@
 		}
 
 		.nav-link {
-			color: rgba(17, 17, 17, 1);
-			font-size: 12px;
+			color: $text-primary;
+			font-size: $fs-sm;
 			font-style: normal;
-			font-weight: 500;
+			font-weight: $fw-normal + 100;
 			text-transform: uppercase;
 			position: relative;
-			padding-right: 10px;
-			padding-left: 10px;
+			padding-right: $nav-link-pad;
+			padding-left: $nav-link-pad;
 			transition: color 0.2s;
 
 			&:before {
@@ -83,14 +83,14 @@
 		    top: 8px;
 		    left: -2.2px;
 			}
-		}
-	}
+		} // Navbar list link
+	} // Navbar list item
 
 	&.navbar-bg-scroll,
 	&:hover {
 		background: rgba($bg-primary, 0.9);
 		box-shadow: 0 1px 5px rgba(8, 8, 8, 0.15);
-	}
+	} // Navbar bg color after scroll
 }
 
 
@@ -107,7 +107,7 @@
 			}
 		}
 	}
-}
+} // Screens above 992px
 
 // Media Queries Down
 @include media-breakpoint-down(sm) {
@@ -122,4 +122,4 @@
 			}
 		}
 	}
-}
+} // Screens below 767.98px

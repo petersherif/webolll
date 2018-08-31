@@ -123,8 +123,8 @@
 		.header__subheadline {
 			font-size: $fs-xl;
 		}
-	}
-}
+	} // Header
+} // Screens above 768px
 
 @include media-breakpoint-down(sm) {
 	.header {
@@ -133,5 +133,5 @@
 			  margin-left: -150px;
 			}
 		}
-	}
-}
+	} // Header
+} // Screens below 767.98px

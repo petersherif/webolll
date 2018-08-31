@@ -96,11 +96,6 @@ $(document).ready(function () {
 		}
 	});
 
-
-	// initialize paroller.js 
-	$('[data-paroller-factor]').paroller();
-
-
 	// Slider initialization
 	var clientsSlider = new Swiper ('.swiper-container', {
 		loop: true,

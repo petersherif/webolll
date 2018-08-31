@@ -102,5 +102,12 @@ $(document).ready(function () {
 
 
 	// Slider initialization
-	var clientsSlider = new Swiper ('.swiper-container', {loop: true, autoplay: {delay: 5000}});
+	var clientsSlider = new Swiper ('.swiper-container', {
+		loop: true,
+		autoplay: {delay: 5000},
+		navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+	});
 });

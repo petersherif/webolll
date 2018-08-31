@@ -1,112 +1,3 @@
-body {
-	font-family: $body-font;
-  font-weight: $fw-normal;
-  font-size: 0.875em;
-  line-height: 2;
-  color: $text-primary;
-  position: relative;
-  overflow: hidden;
-
-	&.loaded {
-		overflow-x: hidden;
-		overflow-y: auto;
-	} // Body after page loaded
-} // Body
-
-h1,
-h3,
-.header p {
-	font-family: $bold-font;
-} // h1, h3, p inside the main header
-
-h1 {
-	font-weight: $fw-bold;
-	line-height: 1;
-	letter-spacing: -3px;
-} // header main headline
-
-h2,
-blockquote {
-	font-family: $display-font;
-	font-weight: $fw-bold;
-} // Sections headline
-
-blockquote {
-	font-size: $fs-xl;
-	padding: 0 20%;
-	line-height: 1.5;
-}
-
-h3 {
-	font-weight: $fw-bold;
-	line-height: 1.25;
-	font-size: $fs-lg + 1;
-} // Blocks headline
-
-.fa {
-	color: $text-accent;
-} // Icons default color
-
-.btn-lg {
-	font-size: $fs-md;
-	padding: $btn-lg-pad;
-	text-transform: uppercase;
-	font-weight: $fw-bold;
-} // Large button
-
-.btn-primary {
-	background: $bg-accent;
-} // Button color
-
-.webolll-logo {
-	max-width: $logo-max-width;
-}
-
-.fade-on-scroll {
-	opacity: 0;
-	margin-top: -30px;
-	transition: opacity 0.8s ease-in-out, margin-top 0.5s ease-in-out;
-
-	&.viewed {
-		opacity: 1;
-		margin-top: 0;
-	}
-} // Fade on scroll
-
-.heart-animation {
-  animation: heart-beat 1s infinite ease-in-out;
-}
-
-@keyframes heart-beat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-} // Heart animation keyframes
-
-
-
-// Media Queries
-@include media-breakpoint-up(sm) {
-	blockquote {
-		font-size: $fs-3x;
-	}
-} // Screens above 768px
-
-@include media-breakpoint-up(md) {
-	.webolll-logo {
-		max-width: $logo-max-width-md;
-	}
-
-	blockquote {
-		font-size: $fs-4x + 2;
-		padding: 0 27%;
-	}
-} // Screens above 992px
-
-
 // Preloader styles
 .page-loading {
   position: fixed;
@@ -165,3 +56,148 @@ h3 {
     opacity: 0;
   }
 } // Pulse animation keyframes
+
+body {
+  font-family: $body-font;
+  font-weight: $fw-normal;
+  font-size: 0.875em;
+  line-height: 2;
+  color: $text-primary;
+  position: relative;
+  overflow: hidden;
+
+  &.loaded {
+    overflow-x: hidden;
+    overflow-y: auto;
+  } // Body after page loaded
+} // Body
+
+h1,
+h3,
+.header p {
+  font-family: $bold-font;
+} // h1, h3, p inside the main header
+
+h1 {
+  font-weight: $fw-bold;
+  line-height: 1;
+  letter-spacing: -3px;
+} // header main headline
+
+h2,
+blockquote {
+  font-family: $display-font;
+  font-weight: $fw-bold;
+} // Sections headline
+
+blockquote {
+  font-size: $fs-xl;
+  padding: 0 20%;
+  line-height: 1.5;
+}
+
+h3 {
+  font-weight: $fw-bold;
+  line-height: 1.25;
+  font-size: $fs-lg + 1;
+} // Blocks headline
+
+.fa {
+  color: $text-accent;
+} // Icons default color
+
+.btn-lg {
+  font-size: $fs-md;
+  padding: $btn-lg-pad;
+  text-transform: uppercase;
+  font-weight: $fw-bold;
+} // Large button
+
+.btn-primary {
+  background: $bg-accent;
+} // Button color
+
+.webolll-logo {
+  max-width: $logo-max-width;
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  margin-top: -30px;
+  transition: opacity 0.8s ease-in-out, margin-top 0.5s ease-in-out;
+
+  &.viewed {
+    opacity: 1;
+    margin-top: 0;
+  }
+} // Fade on scroll
+
+.heart-animation {
+  animation: heart-beat 1s infinite ease-in-out;
+}
+
+@keyframes heart-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+} // Heart animation keyframes
+
+.animated-next {
+  animation: arrow-shake 1.5s infinite ease-in-out;
+}
+
+.animated-prev {
+ animation: arrow-shake 1.5s infinite reverse ease-in-out; 
+}
+
+@keyframes arrow-shake {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+
+  15% {
+    transform: translateX(-2px);
+  }
+
+  35% {
+    transform: translateX(4px);
+  }
+}
+
+// Media Queries
+@include media-breakpoint-up(sm) {
+  blockquote {
+    font-size: $fs-3x;
+  }
+} // Screens above 768px
+
+@include media-breakpoint-up(md) {
+  .webolll-logo {
+    max-width: $logo-max-width-md;
+  }
+
+  blockquote {
+    font-size: $fs-4x + 2;
+    padding: 0 27%;
+  }
+} // Screens above 992px
+
+@include media-breakpoint-down(sm) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 20px;
+  }
+
+  .swiper-button-prev {
+    left: 4px;
+  }
+
+  .swiper-button-next {
+    right: 4px;
+  }
+} // Screens beloe 767.98px

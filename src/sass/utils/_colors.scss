@@ -1,0 +1,65 @@
+// Background colors
+.bk-bg-primary {
+	background-color: $bg-primary;
+}
+.bk-bg-dark {
+	background-color: $bg-dark;
+}
+.bk-bg-darker {
+	background-color: $bg-darker;
+}
+.bk-bg-accent {
+	background-color: $bg-accent;
+}
+
+// Text colors
+.bk-text-primary {
+	color: $text-primary;
+}
+.bk-text-secondary {
+	color: $text-secondary;
+}
+.bk-text-muted {
+	color: $text-muted;
+}
+.bk-text-muted-light {
+	color: $text-muted-light;
+}
+.bk-text-muted-dark {
+	color: $text-muted-dark;
+}
+.bk-text-accent {
+	color: $text-accent;
+}
+
+// Text hover colors
+.bk-hover-text-primary {
+	&:hover {
+		color: $text-primary;
+	}
+}
+.bk-hover-text-secondary {
+	&:hover {
+		color: $text-secondary;
+	}
+}
+.bk-hover-text-muted {
+	&:hover {
+		color: $text-muted;
+	}
+}
+.bk-hover-text-muted-light {
+	&:hover {
+		color: $text-muted-light;
+	}
+}
+.bk-hover-text-muted-dark {
+	&:hover {
+		color: $text-muted-dark;
+	}
+}
+.bk-hover-text-accent {
+	&:hover {
+		color: $text-accent;
+	}
+}

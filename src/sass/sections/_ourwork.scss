@@ -5,6 +5,28 @@
 		&.work-item-#{$wi} {
 			background: url(../img/work-#{$wi}.jpg) center center / cover no-repeat;
 		}
-		
+	}
+
+	&__overlay {
+		@include fullSizeOver();
+		@include flexContentCenter();
+		background: rgba($bg-accent, 0.8);
+		color: $text-secondary;
+		opacity: 0;
+		transition: opacity 0.2s;
+		.work__text-wrapper {
+			transform: scale(0.3);
+			transition: transform 0.3s;
+		}
+	}
+
+	&:hover {
+		.work-item__overlay {
+			opacity: 1;
+
+			.work__text-wrapper {
+				transform: scale(1);
+			}
+		}
 	}
 }

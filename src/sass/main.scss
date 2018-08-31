@@ -1,16 +1,21 @@
 @import '_variables';
-@import 'base/_base';
+@import '_mixins';
+@import 'global/_global';
 @import 'layout/_navbar';
 @import 'layout/_header';
 @import 'layout/_section';
 @import 'layout/_footer';
 @import 'sections/_ourwork';
+@import 'components/_feature';
+@import 'components/_card';
+@import 'utils/_colors';
+@import 'utils/_typography';
 
 .footer {
-	background: $bg-secondary;
+	background: $bg-dark;
 
 	&__copyright {
-		background: $bg-secondary-darker;
+		background: $bg-darker;
 		color: $text-muted-light;
 	}
 }

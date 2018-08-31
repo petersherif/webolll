@@ -4,7 +4,7 @@
 	  <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <meta name="description" content="Brooklyn - Creative Web Agency">
+	  <meta name="description" content="Webolll - Creative Web Agency">
 
 	  <!-- favicon -->
 	  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -16,16 +16,16 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
 
-	  <title>Brooklyn</title>
+	  <title>Webolll</title>
 
 	  <!-- Normalize libirary - To Make browsers render all elements more consistently. -->
 	  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
-	  <!-- Bootstrap v.3.3.7 CSS -->
+	  <!-- Bootstrap v.4.1.3 CSS -->
 	  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-	  <!-- Tachyons css library - Allows us to write less custom css code -->
-	  <link href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" rel="stylesheet">
 	  <!-- Icons Library -->
-	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <!-- Swiper slider -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 
 	  <!-- Custom Fonts -->
 	  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -44,67 +44,67 @@
 	  <![endif]-->
 	</head>
 
-	<body>
+	<body data-spy="scroll" data-target="#navigationMenu">
+
+		<div class="page-loading" id="page-loading">
+			<div class="spinner"></div>
+		</div>
 
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg fixed-top">
-		  <a class="navbar-brand" href="#"><img src="img/logo-dark.svg" alt="Brooklyn" class="img-fluid"></a />
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationMenu" aria-controls="navigationMenu" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg fixed-top" id="navbar" role="navigation">
+		  <a class="navbar-brand smooth-scroll" href="#page-top"><img src="img/logo-dark.png" alt="Webolll" class="webolll-logo img-fluid"></a />
+		  <button class="navbar-toggler px-0" type="button" data-toggle="collapse" data-target="#navigationMenu" aria-controls="navigationMenu" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 
 		  <div class="collapse navbar-collapse" id="navigationMenu">
 		    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		        <a class="nav-link smooth-scroll" href="#page-top">Home</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">About</a>
+		        <a class="nav-link smooth-scroll" href="#about">About</a>
 		      </li>
 		       <li class="nav-item">
-		        <a class="nav-link" href="#">Team</a>
+		        <a class="nav-link smooth-scroll" href="#theteam">Team</a>
 		      </li>
 		       <li class="nav-item">
-		        <a class="nav-link" href="#">Services</a>
+		        <a class="nav-link smooth-scroll" href="#ourservices">Services</a>
 		      </li>
 		       <li class="nav-item">
-		        <a class="nav-link" href="#">Work</a>
+		        <a class="nav-link smooth-scroll" href="#ourwork">Work</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Happy Clients</a>
+		        <a class="nav-link smooth-scroll" href="#happyclients">Happy Clients</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Contact</a>
+		        <a class="nav-link smooth-scroll" href="#getconnected">Contact</a>
 		      </li>
 		    </ul>
 		  </div>
 		</nav> <!-- Navbar -->
 
 		<!-- Header -->
-		<header class="header bg-light d-flex align-items-center justify-content-center" id="page-top">
+		<header class="header bg-light d-flex flex-wrap align-items-center justify-content-center" id="page-top">
 
-			<div class="header__images">
-				<img src="img/header-img-1.png" alt="" class="header__img header__img-1" />
-				<img src="img/header-img-2.png" alt="" class="header__img header__img-2" />
-				<img src="img/header-img-3.png" alt="" class="header__img header__img-3" />
-				<img src="img/header-img-4.png" alt="" class="header__img header__img-4" />
-				<img src="img/header-img-5.png" alt="" class="header__img header__img-5" />
-				<img src="img/header-img-6.png" alt="" class="header__img header__img-6" />
-				<img src="img/header-img-7.png" alt="" class="header__img header__img-7" />
-				<img src="img/header-img-8.png" alt="" class="header__img header__img-8" />
-				<img src="img/header-img-8.png" alt="" class="header__img header__img-9" />
+			<img src="img/header-img-1.png" alt="" class="header__img header__img-1" />
+			<img src="img/header-img-2.png" alt="" class="header__img header__img-2" />
+			<img src="img/header-img-3.png" alt="" class="header__img header__img-3" />
+			<img src="img/header-img-4.png" alt="" class="header__img header__img-4" />
+			<img src="img/header-img-5.png" alt="" class="header__img header__img-5" />
+			<img src="img/header-img-6.png" alt="" class="header__img header__img-6" />
+			<img src="img/header-img-7.png" alt="" class="header__img header__img-7" />
+			<img src="img/header-img-8.png" alt="" class="header__img header__img-8" />
+			<img src="img/header-img-8.png" alt="" class="header__img header__img-9" />
+
+			<div class="header__copy text-center w-100">
+				<h1 class="header__headline mb-3">Web it all, Webolll.</h1>
+				<p class="header__subheadline">We're a creative agency helping you to web it olll.</p>
+				<a href="#about" class="header__cta-btn smooth-scroll btn btn-primary btn-lg">Continue</a>
 			</div>
 
-			<div class="header__copy text-center">
-				<h1 class="header__headline">Start Creating.</h1>
-				<p class="header__subheadline">We're a creative agency located in Brooklyn, New York.</p>
-				<a href="" class="header__cta-btn btn btn-primary">Continue</a>
-			</div>
+	  	<a href="#about" data-paroller-factor="-0.3" data-paroller-type="foreground" class="header__scroll-mouse smooth-scroll"><span class=""><span></span></span></a>
 
-			<a href="#" class="header__scroll-mouse"></a>
 		</header> <!-- Header -->
 
 		<!-- About -->
@@ -112,59 +112,72 @@
 			
 			<div class="container">
 
-					<div class="section-header text-center">
-						<h2 class="section__headline">About Brooklyn.</h2>
+					<div class="section-header text-center px-4">
+						<h2 class="section__headline">About Webolll.</h2>
 						<p class="section__subheadline">
-							We’re a creative agency located in <span class="font-weight-bold">Brooklyn, New York.</span> We’ve won a ton of awards and have been featured in all of the magazines
+							We're a creative agency helping you to <span class="font-weight-bold">web it olll</span>.<br />
+							We provide top quality services and solutions, you'll always find your one here
 						</p>
 					</div>
 					
-				<div class="row">
+				<div class="row fade-on-scroll">
 					
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-mobile-alt"></i>
-						<div class="feature__body">
-							<h3 class="feature__title mb-3">Retina Ready & Responsive</h3>
+						<div class="feature__icon mb-3">
+							<i class="fa fa-lightbulb-o"></i>
+						</div>
+						<div class="feature__body px-4">
+							<h3 class="feature__title mb-3">Brand &amp; Identity</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
 					</div>
 					
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-							<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-download"></i>
-							<div class="feature__body">
-								<h3 class="feature__title mb-3">One Click Demo Installer</h3>
+							<div class="feature__icon mb-3">
+								<i class="fa fa-pencil-square-o"></i>
+							</div>
+							<div class="feature__body px-4">
+								<h3 class="feature__title mb-3">UX / UI Design</h3>
 								<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 							</div>
 					</div>
 					
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-draw-polygon"></i>
-						<div class="feature__body">
-							<h3 class="feature__title mb-3">Drag & Drop Page Builder</h3>
+						<div class="feature__icon mb-3">
+							<i class="fa fa-mobile"></i>
+						</div>
+						<div class="feature__body px-4">
+							<h3 class="feature__title mb-3">APP Development</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
 					</div>
 
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-mobile-alt"></i>
-						<div class="feature__body">
-							<h3 class="feature__title mb-3">Retina Ready & Responsive</h3>
+						<div class="feature__icon mb-3">
+							<i class="fa fa-laptop"></i>
+						</div>
+						<div class="feature__body px-4">
+							<h3 class="feature__title mb-3">Web Development</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
 					</div>
 					
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-							<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-download"></i>
-							<div class="feature__body">
-								<h3 class="feature__title mb-3">One Click Demo Installer</h3>
-								<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
-							</div>
+						<div class="feature__icon mb-3">
+							<i class="fa fa-wordpress"></i>
+						</div>
+						<div class="feature__body px-4">
+							<h3 class="feature__title mb-3">WordPress</h3>
+							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
+						</div>
 					</div>
 					
 					<div class="feature text-center text-md-left col-sm-6 col-lg-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-draw-polygon"></i>
-						<div class="feature__body">
-							<h3 class="feature__title mb-3">Drag & Drop Page Builder</h3>
+						<div class="feature__icon mb-3">
+							<i class="fa fa-diamond"></i>
+						</div>
+						<div class="feature__body px-4">
+							<h3 class="feature__title mb-3">Elite Support</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
 					</div>
@@ -174,13 +187,16 @@
 		</section> <!-- About -->
 
 		<!-- quote -->
-		<section class="parallax-section bg-secondary" id="quote">
+		<section class="parallax-section" id="quote">
 			
-
-			<div class="text-center my-5 py-4">
-				<blockquote class="section__blockquote">Passion Leads To Design, Design Leads To Performance, Performance Leads To Success!</blockquote>
-				<p class="section__quote-auther">
-					united themes
+			<div class="text-center my-5 bk-text-secondary fade-on-scroll">
+				<blockquote class="section__blockquote">
+					We think <i class="fa fa-lightbulb-o"></i>
+					we design <i class="fa fa-paint-brush" style="color: #ffc107;"></i>
+					we code <i class="fa fa-code" style="color: #ef5c2c;"></i><br />
+					we test <i class="fa fa-search" style="color: #4CAF50;"></i> we support <i class="fa fa-medkit" style="color: #e91e63;"></i> we love you <i class="fa fa-heart heart-animation" style="color: #ff3426"></i></blockquote>
+				<p class="section__quote-auther text-uppercase">
+					Webolll
 				</p>
 			</div>
 
@@ -192,74 +208,84 @@
 			
 			<div class="container-fluid">
 
-				<div class="section-header text-center">
-					<h2 class="section__headline">The Crew.</h2>
+				<div class="section-header text-center px-4">
+					<h2 class="section__headline">Webolll Poeple.</h2>
 					<p class="section__subheadline">
-						We believe in a diverse range of personel to bring <span class="font-weight-bold">creative skills</span>, <span class="font-weight-bold">thoughts</span>, and <span class="font-weight-bold">ideas</span> to the table.
+						We believe in a diverse range of personel to bring <span class="font-weight-bold">creative skills</span>,<br />
+						<span class="font-weight-bold">thoughts</span>, and <span class="font-weight-bold">ideas</span> to the table.
 					</p>
 				</div>
 
-				<div class="row no-gutters">
+				<div class="row no-gutters fade-on-scroll">
 					
 					<!-- Team Member Card -->
-					<div class="card col-sm text-center mb-5 border-0">
-						<a href="#"><img src="img/team1-1.jpg" alt="John Brooklyn" class="card-img-top" /></a>
+					<div class="card col-sm-8 offset-sm-2 col-md offset-md-0 text-center mb-5 border-0">
+						<a href="#">
+							<img src="img/team1-1.jpg" alt="John Doe" class="card-img-top" />
+							<img src="img/team1-sw.jpg" alt="John Doe" class="card-img-top overlay-img" />
+						</a>
 						<div class="card-body">
-							<h5 class="card-title">John Brooklyn</h5>
-							<h6 class="card-subtitle">designer</h6>
+							<h3 class="card-title mb-2">John Doe</h3>
+							<p class="card-subtitle text-uppercase mb-4">designer</h6>
 							<p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 						</div>
 						<div class="card-footer bg-white py-3">
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-facebook-f"></li>
+								<li class="card__icon fa fa-facebook-f"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-twitter"></li>
+								<li class="card__icon fa fa-twitter"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-behance"></li>
+								<li class="card__icon fa fa-behance"></li>
 							</a>
 						</div>
 					</div>
 
 					<!-- Team Member Card -->
-					<div class="card col-sm mx-sm-5 text-center mb-5 border-0">
-						<a href="#"><img src="img/team2-1.jpg" alt="Dwayne Smith" class="card-img-top" /></a>
+					<div class="card col-sm-8 offset-sm-2 col-md offset-md-0 mx-md-5 text-center mb-5 border-0">
+						<a href="#">
+							<img src="img/team2-1.jpg" alt="Dwayne Smith" class="card-img-top" />
+							<img src="img/team2-sw.jpg" alt="Dwayne Smith" class="card-img-top overlay-img" />
+						</a>
 						<div class="card-body">
-							<h5 class="card-title">Dwayne Smith</h5>
-							<h6 class="card-subtitle">coder</h6>
+							<h3 class="card-title mb-2">Dwayne Smith</h3>
+							<p class="card-subtitle text-uppercase mb-4">coder</h6>
 							<p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 						</div>
 						<div class="card-footer bg-white py-3">
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-facebook-f"></li>
+								<li class="card__icon fa fa-facebook-f"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-twitter"></li>
+								<li class="card__icon fa fa-twitter"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-github"></li>
+								<li class="card__icon fa fa-github"></li>
 							</a>
 						</div>
 					</div>
 
 					<!-- Team Member Card -->
-					<div class="card col-sm text-center mb-5 border-0">
-						<a href="#"><img src="img/team3-1.jpg" alt="Ruben Lorenz" class="card-img-top" /></a>
+					<div class="card col-sm-8 offset-sm-2 col-md offset-md-0 text-center mb-5 border-0">
+						<a href="#">
+							<img src="img/team3-1.jpg" alt="Ruben Lorenz" class="card-img-top" />
+							<img src="img/team3-sw.jpg" alt="Ruben Lorenz" class="card-img-top overlay-img" />
+						</a>
 						<div class="card-body">
-							<h5 class="card-title">Ruben Lorenz</h5>
-							<h6 class="card-subtitle">support guru</h6>
+							<h3 class="card-title mb-2">Ruben Lorenz</h3>
+							<p class="card-subtitle text-uppercase mb-4">support guru</p>
 							<p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 						</div>
 						<div class="card-footer bg-white py-3">
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-facebook-f"></li>
+								<li class="card__icon fa fa-facebook-f"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-twitter"></li>
+								<li class="card__icon fa fa-twitter"></li>
 							</a>
 							<a href="#" class="card-link">
-								<li class="card__icon fab fa-google-plus-g"></li>
+								<li class="card__icon fa fa-google-plus-g"></li>
 							</a>
 						</div>
 					</div>
@@ -270,42 +296,49 @@
 		</section> <!-- The Crew -->
 
 		<!-- Our Services -->
-		<section class="section-gray bg-light" id="ourservices">
+		<section class="bg-light" id="ourservices">
 			
 			<div class="container">
 				
-				<div class="section-header text-center">
-					<h2 class="section__headline">Our Services.</h2>
+				<div class="section-header text-center px-4">
+					<h2 class="section__headline">Webolll Services.</h2>
 					<p class="section__subheadline">
-						Our quality standards apply also in terms of service, technical expertise and advice. Our dedicated employees are happy to assist you with <span class="font-weight-bold">know-how</span> and <span class="font-weight-bold">experience</span> in your <span class="font-weight-bold">daily business</span>.
+						Our quality standards apply also in terms of service, technical expertise and advice. <br />
+						Our dedicated employees are happy to assist you with <span class="font-weight-bold">know-how</span> and <span class="font-weight-bold">experience</span> in your <span class="font-weight-bold">daily business</span>.
 					</p>
 				</div>
 
-				<div class="text-center my-5">
+				<div class="text-center my-5 fade-on-scroll">
 					<img src="img/keyboard-mouse.png" alt="keyboard-mouse" class="img-fluid" />
 				</div>
 
-				<div class="row">
+				<div class="row fade-on-scroll">
 					
 					<div class="feature text-center text-md-left col-md-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-mobile-alt"></i>
-						<div class="feature__body">
+						<div class="feature__icon mb-3">
+							<i class="fa fa-desktop"></i>
+						</div>
+						<div class="feature__body px-4">
 							<h3 class="feature__title mb-3">Retina Ready & Responsive</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
 					</div>
 
 					<div class="feature text-center text-md-left col-md-4 d-md-flex mb-3">
-							<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-download"></i>
-							<div class="feature__body">
+							<div class="feature__icon mb-3">
+								<i class="fa fa-toggle-on"></i>
+							</div>
+							<div class="feature__body px-4">
 								<h3 class="feature__title mb-3">One Click Demo Installer</h3>
 								<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 							</div>
 					</div>
 
 					<div class="feature text-center text-md-left col-md-4 d-md-flex mb-3">
-						<i class="feature__icon mt-2 mb-3 mr-4 fas fa-3x fa-draw-polygon"></i>
-						<div class="feature__body">
+						<div class="feature__icon mb-3">
+							<i class="fa fa-external-link"></i>
+						</div>
+						<div class="feature__body px-4">
 							<h3 class="feature__title mb-3">Drag & Drop Page Builder</h3>
 							<p class="feature-subtitle">Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
 						</div>
@@ -317,11 +350,11 @@
 		</section> <!-- Our Services -->
 
 		<!-- Call to Action Section -->
-		<section class="section-gray bg-secondary py-5" id="ctasection">
+		<section class="section-dark bk-bg-dark py-5" id="ctasection">
 			
-			<p class="my-2 text-center">
-				<a href="#" class="cta-link cta-link-white">Get in touch with us!</a>
-			</p>
+			<h3 class="my-2 text-center">
+				<a href="#" class="cta-link link cta-link-white bk-text-secondary bk-hover-text-muted-light no-underline">Get in touch with us!</a>
+			</h3>
 
 		</section> <!-- Call to Action Section -->
 
@@ -330,46 +363,51 @@
 			
 			<div class="container-fluid">
 				
-				<div class="section-header text-center mb-5">
-					<h2 class="section__headline">Our Work.</h2>
+				<div class="section-header text-center px-4 mb-5">
+					<h2 class="section__headline">Webolll Work.</h2>
 					<p class="section__subheadline">
 						We believe our work speaks for itself. Browse our most recent projects below <br/>
 						and enjoy our <span class="font-weight-bold">handmade work</span> with love for every detail.
 					</p>
 				</div>
 	
-				<div class="work-filter">
-					<a href="#">Show all</a>
-					<a href="#">Marketing</a>
-					<a href="#">Mockups</a>
-					<a href="#">Logo Design</a>
-				</div>
-	
-				<div class="row">
+				<div class="row fade-on-scroll">
 	
 					<div class="col-12 col-lg-6">
 						<div class="row">
 							<div class="work-item work-item-1 col-sm-6 col-lg-12">
-								<div class="work-item__overlay text-center">
-									<p>Cap Mock-up</p>
-									<span>Logo Design</span>
-								</div>
+								<a href="#">
+									<div class="work-item__overlay text-center">
+										<div class="work__text-wrapper">
+											<h3 class="mb-0 font-weight-bold">Cap Mock-up</h3>
+											<span class="text-uppercase">Logo Design</span>
+										</div>
+									</div>
+								</a>
 							</div>
 							<div class="work-item work-item-2 col-sm-6 col-lg-12">
-								<div class="work-item__overlay text-center">
-									<p>Cap Mock-up</p>
-									<span>Logo Design</span>
-								</div>
+								<a href="#">
+									<div class="work-item__overlay text-center">
+										<div class="work__text-wrapper">
+											<h3 class="mb-0 font-weight-bold">Poster Mock-Up</h3>
+											<span class="text-uppercase">Mockups</span>
+										</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
 	
 					<div class="col-12 col-sm-6 p-0">
 						<div class="work-item work-item-3 h-100">
-							<div class="work-item__overlay text-center">
-								<p>Cap Mock-up</p>
-								<span>Logo Design</span>
-							</div>
+							<a href="#">
+								<div class="work-item__overlay text-center">
+									<div class="work__text-wrapper">
+										<h3 class="mb-0 font-weight-bold">Yogurt Mock-Up</h3>
+										<span class="text-uppercase">Marketing</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 			
@@ -377,26 +415,38 @@
 	
 					<div class="col-12 col-sm-6 p-0">
 						<div class="work-item work-item-4 h-100">
-							<div class="work-item__overlay text-center">
-								<p>Cap Mock-up</p>
-								<span>Logo Design</span>
-							</div>
+							<a href="#">
+								<div class="work-item__overlay text-center">
+									<div class="work__text-wrapper">
+										<h3 class="mb-0 font-weight-bold">Smoothie<br> Plastic Bottle Mock-Up</h3>
+										<span class="text-uppercase">Mockups</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 	
 					<div class="col-12 col-lg-6">
 						<div class="row">
 							<div class="work-item work-item-5 col-sm-6 col-lg-12">
-								<div class="work-item__overlay text-center">
-									<p>Cap Mock-up</p>
-									<span>Logo Design</span>
-								</div>
+								<a href="#">
+									<div class="work-item__overlay text-center">
+										<div class="work__text-wrapper">
+											<h3 class="mb-0 font-weight-bold">Software Box Mock-Up</h3>
+											<span class="text-uppercase">Marketing</span>
+										</div>
+									</div>
+								</a>
 							</div>
 							<div class="work-item work-item-6 col-sm-6 col-lg-12">
-								<div class="work-item__overlay text-center">
-									<p>Cap Mock-up</p>
-									<span>Logo Design</span>
-								</div>
+								<a href="#">
+									<div class="work-item__overlay text-center">
+										<div class="work__text-wrapper">
+											<h3 class="mb-0 font-weight-bold">Trendy Vintage <br>Logos &amp; Badges</h3>
+											<span class="text-uppercase">Logo Design</span>
+										</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -409,16 +459,64 @@
 		<!-- Happy Clients -->
 		<section id="happyclients">
 			
-			<div class="container">
+			<div class="container-fluid">
 
-				<div class="section-header text-center">
+				<div class="section-header text-center px-4">
 					<h2 class="section__headline">Happy Clients.</h2>
 					<p class="section__subheadline">
-						The comments below are just a sample of the <span class="font-weight-bold">26.000 clients</span> worldwide<br> who transformed their business website with Brooklyn.
+						Here are some comments as a sample of <span class="font-weight-bold">37.000 clients</span> around the globe<br> are happy with Webolll. Be one today!
 					</p>
 				</div>
 
-				<div class="clients__slider">Clients Slider Here</div>
+				<div class="clients__slider mb-5 fade-on-scroll">
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <!-- Slides -->
+					        <div class="swiper-slide">
+					        	<div class="row">
+					        		<div class="col-4 offset-4 col-md-2 offset-md-2 mb-4"><img src="img/team1-1.jpg" alt="Ron Schmidt" class="img-fluid rounded-circle"></div>
+					        		<div class="col-10 offset-1 text-center col-md-6 text-md-left">
+					        			<p class="font-italic">
+					        				“I’m really satisfied, lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit!  Reprehenderit nemo iure esse est velit eligendi sapiente error cum ullam laboriosam!”
+					        			</p>
+					        			<h3 class="mb-0">John Snow</h3>
+					        			<p>Webolll Happy Customer</p>
+					        		</div>
+					        	</div>
+					        </div>
+
+					        <div class="swiper-slide">
+					        	<div class="row">
+					        		<div class="col-4 offset-4 col-md-2 offset-md-2 mb-4"><img src="img/team2-1.jpg" alt="Ron Schmidt" class="img-fluid rounded-circle"></div>
+					        		<div class="col-10 offset-1 text-center col-md-6 text-md-left">
+					        			<p class="font-italic">
+					        				“I got the work reprehenderit nemo iure esse est velit eligendi sapiente error cum ullam laboriosam! lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit!  Reprehenderit nemo iure esse est velit eligendi sapiente error cum ullam laboriosam!”
+					        			</p>
+					        			<h3 class="mb-0">Vin Henry</h3>
+					        			<p>Webolll Happy Customer</p>
+					        		</div>
+					        	</div>
+					        </div>
+
+					        <div class="swiper-slide">
+					        	<div class="row">
+					        		<div class="col-4 offset-4 col-md-2 offset-md-2 mb-4"><img src="img/team3-1.jpg" alt="Ron Schmidt" class="img-fluid rounded-circle"></div>
+					        		<div class="col-10 offset-1 text-center col-md-6 text-md-left">
+					        			<p class="font-italic">
+					        				“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsam dolorem quasi rem, voluptates quibusdam libero!”
+					        			</p>
+					        			<h3 class="mb-0">Nas Sanchez</h3>
+					        			<p>Webolll Happy Customer</p>
+					        		</div>
+					        	</div>
+					        </div>
+					    </div>
+
+					    <div class="swiper-button-prev d-none d-md-block"></div>
+					    <div class="swiper-button-next d-none d-md-block"></div>
+
+					</div>
+				</div>
 
 				<div class="row">
 
@@ -444,11 +542,11 @@
 		</section> <!-- Happy Clients -->
 
 		<!-- Get Connected -->
-		<section class="parallax-section bg-secondary" id="getconnected">
+		<section class="parallax-section bk-text-secondary" id="getconnected">
 			
 			<div class="container-fluid">
 
-				<div class="section-header text-center">
+				<div class="section-header text-center px-4">
 					<h2 class="section__headline">Get Connected.</h2>
 					<p class="section__subheadline">
 						We welcome you to contact us for more information <br>
@@ -456,30 +554,38 @@
 					</p>
 				</div>
 
-				<div class="row">
+				<div class="row fade-on-scroll">
 
 					<div class="social-item text-center col-sm-3">
-						<i class="social-icon fab fa-4x fa-twitter"></i>
-						<h5 class="social-title">Twitter</h5>
-						<p class="social-subtitle">Follow us on twitter</p>
+						<a href="" class="d-block link bk-text-secondary bk-hover-text-muted-light no-underline">
+							<i class="social-icon fa fa-4x fa-twitter bk-text-secondary mb-4"></i>
+							<h3 class="social-title mb-0">Twitter</h3>
+							<p class="social-subtitle text-uppercase">Follow us on twitter</p>
+						</a>
 					</div>
 
 					<div class="social-item text-center col-sm-3">
-						<i class="social-icon fab fa-4x fa-facebook-f"></i>
-						<h5 class="social-title">Facebook</h5>
-						<p class="social-subtitle">Join the conversatoin</p>
+						<a href="" class="d-block link bk-text-secondary bk-hover-text-muted-light no-underline">
+							<i class="social-icon fa fa-4x fa-facebook-f bk-text-secondary mb-4"></i>
+							<h3 class="social-title mb-0">Facebook</h3>
+							<p class="social-subtitle text-uppercase">Join out FB group</p>
+						</a>
 					</div>
 
 					<div class="social-item text-center col-sm-3">
-						<i class="social-icon fab fa-4x fa-youtube"></i>
-						<h5 class="social-title">Youtube</h5>
-						<p class="social-subtitle">view exclusive videos</p>
+						<a href="" class="d-block link bk-text-secondary bk-hover-text-muted-light no-underline">
+							<i class="social-icon fa fa-4x fa-youtube bk-text-secondary mb-4"></i>
+							<h3 class="social-title mb-0">Youtube</h3>
+							<p class="social-subtitle text-uppercase">be first to watch</p>
+						</a>
 					</div>
 
 					<div class="social-item text-center col-sm-3">
-						<i class="social-icon fab fa-4x fa-instagram"></i>
-						<h5 class="social-title">Instagram</h5>
-						<p class="social-subtitle">latest images</p>
+						<a href="" class="d-block link bk-text-secondary bk-hover-text-muted-light no-underline">
+							<i class="social-icon fa fa-4x fa-instagram bk-text-secondary mb-4"></i>
+							<h3 class="social-title mb-0">Instagram</h3>
+							<p class="social-subtitle text-uppercase">cool images cool</p>
+						</a>
 					</div>
 	
 				</div> <!-- row -->
@@ -494,74 +600,69 @@
 				<div class="row">
 
 					<div class="col-6 col-md-4">
-						<h6 class="footer-list__headline"><img src="img/logo-light.svg" alt="Brooklyn" class="img-fluid" /></h6>
+						<h3 class="footer-list__headline text-uppercase"><img src="img/logo-white.png" alt="Webolll" class="webolll-logo img-fluid" /></h6>
 						<ul class="list-unstyled">
 							<li class="footer__list-item">
-								<p>
-									Brooklyn, a truly multipurpose theme with more than one face.
-								</p>
-							</li>
-							<li class="footer__list-item">
-								<a href="#"><i class="fab fa-behance"></i></a>
-								<a href="#"><i class="fab fa-behance"></i></a>
-								<a href="#"><i class="fab fa-behance"></i></a>
-								<a href="#"><i class="fab fa-behance"></i></a>
+								<a href="#" class="link mr-2"><i class="fa fa-behance fa-lg"></i></a>
+								<a href="#" class="link mr-2"><i class="fa fa-facebook-f fa-lg"></i></a>
+								<a href="#" class="link mr-2"><i class="fa fa-instagram fa-lg"></i></a>
+								<a href="#" class="link mr-2"><i class="fa fa-twitter fa-lg"></i></a>
 							</li>
 						</ul>
 					</div>
 
 					<div class="col-6 col-md-4">
-						<h6 class="footer-list__headline">our location</h6>
+						<h3 class="footer-list__headline text-uppercase">our location</h6>
 						<ul class="list-unstyled">
 							<li class="footer__list-item">
-								<i class="fas fa-phone"></i>
-								1399 Beverley Rd Brooklyn, NY 11218
+								<i class="fa fa-map-marker"></i>
+								159 The street of webolll, NY
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-phone"></i>
-								1-8456-563-BKLYN
+								<i class="fa fa-phone"></i>
+								1-8456-5634-webolll
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-phone"></i>
+								<i class="fa fa-fax"></i>
 								1-8456-563-FAX
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-phone"></i>
-								<a href="#">contact@yourdomain.com</a>
+								<i class="fa fa-envelope"></i>
+								<a href="#" class="link">contact@yourdomain.com</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-phone"></i>
-								<a href="#">yourdomain.com</a>
+								<i class="fa fa-globe"></i>
+								<a href="#" class="link">yourdomain.com</a>
 							</li>
 						</ul>
 					</div>
 
 					<div class="col-6 col-md-4">
-						<h6 class="footer-list__headline">navigation</h6>
+						<h3 class="footer-list__headline text-uppercase">navigation</h3>
 						<ul class="list-unstyled">
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">Home</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">Home</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">About</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">About</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">Services</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">Services</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">Work</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">Work</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">Team</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">Team</a>
 							</li>
 							<li class="footer__list-item">
-								<i class="fas fa-angle-right"></i>
-								<a href="#">Contact</a>
+								<i class="fa fa-angle-right"></i>
+								<a href="#" class="link">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -570,21 +671,26 @@
 
 			</div> <!-- container -->
 
-			<div class="footer__copyright pt-4 pb-3 text-center">
-				<h6 class="copyright-headline">We <i class="fas fa-heart" style="color: #bf1313"></i> brooklyn</h6>
-				<p class="copyright-subheadline mb-0">&copy; brooklyn 2018 </p>
+			<div class="footer__copyright pt-4 pb-3 text-center text-uppercase">
+				<h6 class="copyright-headline font-weight-bold bk-text-secondary">webolll <i class="fa fa-heart mx-0 heart-animation" style="color: #bf1313"></i> you</h6>
+				<p class="copyright-subheadline mb-0">&copy; webolll 2018 </p>
 			</div>
 
 		</footer> <!-- Footer -->
 		
 		<!-- jQuery v.3.3.1 Library -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 		<!-- Popperjs Library -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
 		<!-- Bootstrap v.4.1.3 JS -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	
+		<!-- Swiper slider js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+
+		<script src="https://tgomilar.github.io/paroller.js/dist/jquery.paroller.min.js"></script>
 
 		<!-- Custom JS -->
 		<script src="js/main.min.js"></script>

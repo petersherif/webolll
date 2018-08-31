@@ -12,6 +12,7 @@ const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
+const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const htmlreplace = require("gulp-html-replace");
@@ -70,9 +71,11 @@ function images() {
 function sasscompile() {
   return gulp
     .src("./src/sass/**/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(autoprefixer({browsers: ['last 2 versions']}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./src/css/"))
     .pipe(browsersync.stream());
 }
@@ -90,9 +93,11 @@ function css() {
 function js() {
   return gulp
     .src("./src/js/*.js")
+    .pipe(sourcemaps.init())
     .pipe(concat("main.js"))
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist/js/"))
 }
 // Watch files to reload the browser on changes

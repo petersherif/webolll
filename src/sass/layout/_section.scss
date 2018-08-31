@@ -1,4 +1,35 @@
 section {
 	padding-top: $section-pad;
 	padding-bottom: $section-pad;
+
+	.section__headline {
+		font-size: $fs-6x;
+		margin-bottom: 25px;
+	}
+
+	.section__subheadline {
+		font-family: $bold-font;
+		font-size: $fs-lg;
+		line-height: 2;
+		margin-bottom: 80px;
+	}
+
+	&#quote {
+		background: $black url(../img/contact-hero.jpg) center center / cover no-repeat;
+		background-attachment: fixed;
+	}
+
+	&#getconnected {
+		background: $black url(../img/contact-hero-1.jpg) center center / cover no-repeat;
+		background-attachment: fixed;
+	}
+}
+
+// Media Queries Up
+@include media-breakpoint-up(lg) {
+	section {
+		.section__subheadline {
+			font-size: $fs-xl;
+		}
+	}
 }

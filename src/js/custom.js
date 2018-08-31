@@ -8,19 +8,14 @@ $(document).ready(function () {
     }, 1000 );
   });
 
-
-	// initialize paroller.js 
-	$('[data-paroller-factor]').paroller();
-
-
-	// Navbar background on scroll and expand
+	// Navbar changes on page scroll
 	$(document).scroll(function () {
 
-			// Add background color to navbar on scroll > 60px
-			$('.navbar').toggleClass('navbar-bg-scroll', $(this).scrollTop() > 60);
+		// Add background color to navbar on scroll > 60px
+		$('.navbar').toggleClass('navbar-bg-scroll', $(this).scrollTop() > 60);
 
 
-			// ScrollSpy
+		// ScrollSpy
 
 			// Get out nav links
 			var	bodyOffset = 66,
@@ -42,7 +37,6 @@ $(document).ready(function () {
 					var $windowTop = $(window).scrollTop() + bodyOffset,
 							$elementTop = Math.floor($(element).offset().top);
 							$elementBottom = Math.floor($elementTop + $(element).outerHeight());
-							console.log($windowTop);
 
 					if ($windowTop >= $elementTop && $windowTop < $elementBottom) {
 						$(link).parent().siblings().removeClass('active');
@@ -54,9 +48,41 @@ $(document).ready(function () {
 			}
 	});
 
-	$('.navbar-toggler').click(function() {
-		$(this).find('.navbar-toggler-icon').toggleClass('opened');
+	// Fade in elements on scroll
+	$(window).scroll(function() {
+		$('.fade-on-scroll').each(function(i) {
+			var topOfElement = $(this).offset().top,
+					bottomOfWindow = $(window).scrollTop() + $(window).height();
+
+			if(bottomOfWindow > (topOfElement + 100)) {
+				$(this).addClass('viewed');
+			}
+		});
 	});
+
+
+	// Small function to toggle .opened class on navbar-toggler icon
+	function toggleMenuIcon(e) {
+		$(e).find('.navbar-toggler-icon').toggleClass('opened');
+	}
+
+	// Navbar toggler animated and transformed to X icon on click
+	$('.navbar-toggler').click(function() {
+		toggleMenuIcon(this);
+	});
+
+	// Navbar collapses when nav link clicked on small screens
+	$('.nav-link').click(function() {
+		if($(window).Width() < 992) {
+			$('.navbar-toggler').click();
+			toggleMenuIcon(this);
+		}
+	});
+
+
+	// initialize paroller.js 
+	$('[data-paroller-factor]').paroller();
+
 
 	// Slider initialization
 	var clientsSlider = new Swiper ('.swiper-container', {loop: true, autoplay: {delay: 5000}});

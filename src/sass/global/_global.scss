@@ -56,6 +56,16 @@ h3 {
 	max-width: 115px;
 }
 
+.fade-on-scroll {
+	opacity: 0;
+	margin-top: -30px;
+	transition: opacity 0.8s ease-in-out, margin-top 0.5s ease-in-out;
+
+	&.viewed {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
 // .swiper-container {
 // 	min-height: 300px;
 // }

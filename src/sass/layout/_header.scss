@@ -37,12 +37,12 @@
   		bottom: -1%;
 		}
 		&.header__img-8 {
-      bottom: 195px;
+      bottom: 35%;
    		right: 74%;
 	    transform: rotate(-60deg);
 		}
 		&.header__img-9 {
-      bottom: 170px;
+      bottom: 30%;
   		right: 70%;
 		}
 	} //Header images
@@ -121,7 +121,17 @@
 		}
 
 		.header__subheadline {
-			font-size: $fs-lg;
+			font-size: $fs-xl;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.header {
+		.header__img {
+			&.header__img-5 {
+			  margin-left: -150px;
+			}
 		}
 	}
 }

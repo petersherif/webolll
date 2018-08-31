@@ -5,6 +5,12 @@ body {
   line-height: 2;
   color: $text-primary;
   position: relative;
+  overflow: hidden;
+
+	&.loaded {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 }
 
 h1,
@@ -52,7 +58,7 @@ h3 {
 	background: $bg-accent;
 }
 
-.brooklyn-logo {
+.webolll-logo {
 	max-width: 115px;
 }
 
@@ -66,9 +72,19 @@ h3 {
 		margin-top: 0;
 	}
 }
-// .swiper-container {
-// 	min-height: 300px;
-// }
+
+.heart-animation {
+  animation: heart-beat 1s infinite ease-in-out;
+}
+
+@keyframes heart-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 // Media Queries
 @include media-breakpoint-up(sm) {
@@ -78,7 +94,7 @@ h3 {
 }
 
 @include media-breakpoint-up(md) {
-	.brooklyn-logo {
+	.webolll-logo {
 		max-width: 97px;
 	}
 
@@ -87,3 +103,48 @@ h3 {
 		padding: 0 27%;
 	}
 }
+
+
+.page-loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #F9FAFB;
+  z-index: 99999; }
+  .page-loading .spinner {
+    border-radius: 50px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+    .page-loading .spinner:before, .page-loading .spinner:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $bg-dark;
+      border-radius: 50px;
+      opacity: 0; }
+    .page-loading .spinner:before {
+      transform: scale(1);
+      animation: pulse 1000ms infinite linear; }
+    .page-loading .spinner:after {
+      animation: pulse 1000ms 350ms infinite linear; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.1);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }

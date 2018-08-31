@@ -1,5 +1,14 @@
-$(document).ready(function () {
+// Hides the page loader when the page load completely
+$(window).on('load', function() {
+	$('#page-loading').fadeOut();
+	// Body overflow is hidden by default. The next line adds to the body
+	// the class .loaded{overflow-x: hidden; overflow-y: auto;}
+	$('body').addClass('loaded');
+});
 
+
+$(document).ready(function () {
+	
   // Smooth scrolling
   $('.smooth-scroll').click(function(e) {
     e.preventDefault();
@@ -49,7 +58,7 @@ $(document).ready(function () {
 	});
 
 	// Fade in elements on scroll
-	$(window).scroll(function() {
+	function fadeElementsIn() {
 		$('.fade-on-scroll').each(function(i) {
 			var topOfElement = $(this).offset().top,
 					bottomOfWindow = $(window).scrollTop() + $(window).height();
@@ -58,6 +67,14 @@ $(document).ready(function () {
 				$(this).addClass('viewed');
 			}
 		});
+	}
+
+	// A call when the page loads with scroll made before page refresh
+	fadeElementsIn();
+
+	$(window).scroll(function() {
+		// A call for live page scroll
+		fadeElementsIn();
 	});
 
 

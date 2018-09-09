@@ -1,7 +1,7 @@
 .card {
 
 	.overlay-img {
-		@include fullSizeOver();
+		@extend %fullSizeOverlay;
 		opacity: 0;
 		transition: opacity 0.2s;
 	} // Overlay img

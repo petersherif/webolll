@@ -1,5 +1,6 @@
 .footer {
 	color: $text-muted;
+	background: $bg-dark;
 
 	.footer-list__headline {
 		margin-bottom: 15px;
@@ -19,4 +20,10 @@
 			text-decoration: none;
 		}
 	} // Footer links
+	
+	&__copyright {
+		background: $bg-darker;
+		color: $text-muted-light;
+	} // Footer copyright text
+
 } // Footer

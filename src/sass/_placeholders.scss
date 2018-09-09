@@ -1,0 +1,12 @@
+// Full width overlay (position absolute)
+%fullSizeOverlay {
+  @include absolute(top right bottom left);
+}
+
+// Flex with content center
+%flexContentCenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

@@ -8,8 +8,8 @@
 	}
 
 	&__overlay {
-		@include fullSizeOver();
-		@include flexContentCenter();
+		@extend %fullSizeOverlay;
+		@extend %flexContentCenter;
 		background: rgba($bg-accent, 0.8);
 		color: $text-secondary;
 		opacity: 0;

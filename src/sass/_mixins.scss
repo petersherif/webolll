@@ -123,19 +123,71 @@
 }
 
 
-// Full width overlay (position absolute)
-@mixin fullSizeOver {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+// Helper function for Positioning mixin
+@function is-valid($value) {
+  // Returns true if the value is a number and has a unit or if it's a valid keyword value
+  @return (type-of($value) == 'number' and not unitless($value)) or index(auto initial inherit 0, $value);
 }
 
-// Flex with content center
-@mixin flexContentCenter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+// Positioning mixin
+@mixin position($position, $args: ()) {
+  // Set the position
+  position: $position;
+
+  // Prepare the offsets map
+  $offsets: top right bottom left;
+
+  // For each offset in the offsets map
+  @each $offset in $offsets {
+
+    // Store the index of the recieved arguments for the current offset 
+    $index: index($args, $offset);
+
+    // Check if the current offset exists in the recieved arguments
+    @if $index {
+
+      // Check if the current offset in the last in the recieved arguments
+      @if $index == length($args) {
+        #{$offset}: 0;
+      }
+
+
+      @else {
+        // Store the next argument
+        $next: nth($args, $index + 1);
+
+        // Check if the next argument is a unit number
+        // or one of the valid values "auto, initial, inherit, 0" then use it
+        @if is-valid($next) {
+          #{$offset}: $next;
+        }
+
+        // Check if the next argument is an offset then assign 0 to the current offset
+        @else if index($offsets, $next) {
+          #{$offset}: 0;
+        }
+
+        // If it's not a valid value nor an offset, return an error of Invalid value
+        @else {
+          @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+        }
+      }
+
+    }
+  }
+}
+
+// Position absolute mixin
+@mixin absolute($args: ()) {
+  @include position(absolute, $args);
+}
+
+// Position fixed mixin
+@mixin fixed($args: ()) {
+  @include position(fixed, $args);
+}
+
+// Position relative mixin
+@mixin relative($args: ()) {
+  @include position(relative, $args);
 }

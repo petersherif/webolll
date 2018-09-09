@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_mixins';
+@import '_placeholders';
 @import 'global/_global';
 @import 'layout/_navbar';
 @import 'layout/_header';
@@ -10,12 +11,3 @@
 @import 'components/_card';
 @import 'utils/_colors';
 @import 'utils/_typography';
-
-.footer {
-	background: $bg-dark;
-
-	&__copyright {
-		background: $bg-darker;
-		color: $text-muted-light;
-	}
-}
